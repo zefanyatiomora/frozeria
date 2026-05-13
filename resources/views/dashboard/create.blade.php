@@ -83,7 +83,30 @@
 
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Satuan *</label>
-                        <input type="text" name="satuan" class="form-control" placeholder="pcs / pack">
+
+                        <select name="satuan" class="form-select">
+                            <option value="">Pilih satuan</option>
+
+                            <option value="pcs" {{ old('satuan') == 'pcs' ? 'selected' : '' }}>
+                                pcs
+                            </option>
+
+                            <option value="pack" {{ old('satuan') == 'pack' ? 'selected' : '' }}>
+                                pack
+                            </option>
+
+                            <option value="box" {{ old('satuan') == 'box' ? 'selected' : '' }}>
+                                box
+                            </option>
+
+                            <option value="kg" {{ old('satuan') == 'kg' ? 'selected' : '' }}>
+                                kg
+                            </option>
+
+                            <option value="liter" {{ old('satuan') == 'liter' ? 'selected' : '' }}>
+                                liter
+                            </option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
